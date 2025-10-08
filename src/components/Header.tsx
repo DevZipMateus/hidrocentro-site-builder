@@ -43,13 +43,13 @@ const Header = () => {
         isScrolled ? "bg-background/95 backdrop-blur-md shadow-md" : "bg-background"
       }`}
     >
-      <nav className="container mx-auto px-4 py-3">
+      <nav className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
           <button
             onClick={() => scrollToSection("hero")}
             className="flex items-center gap-3 transition-opacity hover:opacity-80"
           >
-            <img src={logo} alt="Hidrocentro Equipamentos Hidráulicos" className="h-16 md:h-20" />
+            <img src={logo} alt="Hidrocentro Equipamentos Hidráulicos" className="h-20 md:h-24" />
           </button>
 
           {/* Desktop Navigation */}
