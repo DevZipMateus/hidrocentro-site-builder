@@ -49,7 +49,7 @@ const Header = () => {
             onClick={() => scrollToSection("hero")}
             className="flex items-center gap-3 transition-opacity hover:opacity-80"
           >
-            <img src={logo} alt="Hidrocentro Equipamentos Hidráulicos" className="h-20 md:h-24" />
+            <img src={logo} alt="Hidrocentro Equipamentos Hidráulicos" className="h-28 md:h-36" />
           </button>
 
           {/* Desktop Navigation */}
