@@ -43,7 +43,7 @@ const Header = () => {
         isScrolled ? "bg-background/95 backdrop-blur-md shadow-md" : "bg-background"
       }`}
     >
-      <nav className="container mx-auto px-4 py-1">
+      <nav className="container mx-auto px-4 py-0.5">
         <div className="flex items-center justify-between">
           <button
             onClick={() => scrollToSection("hero")}
