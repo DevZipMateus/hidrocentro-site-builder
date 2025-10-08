@@ -1,30 +1,40 @@
-import { Wrench, Cable, Cog, CircleDot, Cylinder } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import bombasImg from "@/assets/bombas.jpg";
+import mangueirasImg from "@/assets/mangueiras.jpg";
+import comandosImg from "@/assets/comandos.jpg";
+import setorLeveImg from "@/assets/setor-leve.jpg";
+import setorPesadaImg from "@/assets/setor-pesada.jpg";
+import cilindrosImg from "@/assets/cilindros.jpg";
 
 const Products = () => {
   const products = [
     {
-      icon: Wrench,
+      image: bombasImg,
       title: "Bombas hidráulicas",
       description: "Bombas de alta performance para diversos tipos de aplicações industriais e agrícolas.",
     },
     {
-      icon: Cable,
+      image: mangueirasImg,
       title: "Mangueiras hidráulicas",
       description: "Mangueiras de qualidade superior para sistemas hidráulicos de alta pressão.",
     },
     {
-      icon: Cog,
+      image: comandosImg,
       title: "Comandos hidráulicos",
       description: "Comandos precisos e confiáveis para controle de sistemas hidráulicos.",
     },
     {
-      icon: CircleDot,
-      title: "Setores de direção",
-      description: "Setores de direção para linha leve e pesada, garantindo segurança e durabilidade.",
+      image: setorLeveImg,
+      title: "Setores de direção linha leve",
+      description: "Setores de direção para veículos leves, garantindo segurança e durabilidade.",
     },
     {
-      icon: Cylinder,
+      image: setorPesadaImg,
+      title: "Setores de direção linha pesada",
+      description: "Setores de direção para veículos pesados, com máxima resistência e confiabilidade.",
+    },
+    {
+      image: cilindrosImg,
       title: "Cilindros hidráulicos",
       description: "Cilindros hidráulicos robustos para as mais diversas aplicações industriais.",
     },
@@ -47,13 +57,17 @@ const Products = () => {
             {products.map((product, index) => (
               <Card
                 key={index}
-                className="group border-border hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-fade-in"
+                className="group border-border hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-fade-in overflow-hidden"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
+                <div className="relative h-48 overflow-hidden bg-muted">
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
                 <CardContent className="p-6">
-                  <div className="w-16 h-16 mb-4 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                    <product.icon className="text-accent" size={32} />
-                  </div>
                   <h3 className="text-xl font-bold text-foreground mb-3">{product.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{product.description}</p>
                 </CardContent>
