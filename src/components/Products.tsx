@@ -69,7 +69,15 @@ const Products = () => {
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-foreground mb-3">{product.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{product.description}</p>
+                  <p className="text-muted-foreground leading-relaxed mb-4">{product.description}</p>
+                  <a
+                    href="https://wa.me/555532861274"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white bg-[#25D366] rounded-md hover:bg-[#20BA5A] transition-colors"
+                  >
+                    Para mais informações clique aqui
+                  </a>
                 </CardContent>
               </Card>
             ))}
